@@ -4,10 +4,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import pl.wat.grafql.Book.Book;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+import javax.transaction.Transactional;
 import java.util.Collection;
 
 @Entity
@@ -19,7 +17,7 @@ public class Author {
     private Integer id;
     private String firstName;
     private String lastName;
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author", fetch = FetchType.EAGER)
     private Collection<Book> books;
 
     public Author(String firstName, String lastName) {
