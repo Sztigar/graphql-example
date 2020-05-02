@@ -10,7 +10,7 @@
 
 ```
 mutation {
-  addAuthor(firstName: "Wiktor", lastName: "Wojdamutation and queries") {
+  addAuthor(firstName: "Wiktor", lastName: "Wojda") {
     id
   }
   addBook(title: "1998", pageCount: 255, authorId: 1){
