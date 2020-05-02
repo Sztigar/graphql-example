@@ -10,7 +10,6 @@ import javax.persistence.*;
 @Entity
 @Data
 @RequiredArgsConstructor
-@NoArgsConstructor
 public class Book {
     @Id
     @GeneratedValue
