@@ -1,6 +1,7 @@
 package pl.wat.grafql.Book;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import pl.wat.grafql.Author.Author;
 
@@ -9,6 +10,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @RequiredArgsConstructor
+@NoArgsConstructor
 public class Book {
     @Id
     @GeneratedValue
